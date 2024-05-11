@@ -59,7 +59,7 @@ function BagInfo() {
     return (
         <Layout>
             <section className="text-gray-600 body-font overflow-hidden">
-                <div className="container px-5 py-20 mx-auto">
+                <div className="container px-5 py-32 mx-auto">
                     {bags && 
                     <div className="lg:w-4/5 mx-auto flex flex-wrap">
                         <img
