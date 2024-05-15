@@ -24,9 +24,6 @@ function DashboardTab() {
         setIsOpen(true)
     }
 
-
-  
-
     return (
         <div >
             <div className="container mx-auto">
