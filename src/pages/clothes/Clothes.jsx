@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import ClotheCard from '../../components/clotheCard/ClotheCard'
 import Layout from '../../components/layout/Layout'
 import myContext from '../../context/data/myContext'
@@ -46,12 +47,16 @@ function Clothes() {
                                     return (
                                         <div key={index} className="p-4 lg:w-1/4 md:w-1/2 drop-shadow-lg " >
                                             <div className="h-full border-2 hover:shadow-gray-100 hover:shadow-2xl transition-shadow duration-300 ease-in-out    border-gray-200 border-opacity-60 rounded-2xl overflow-hidden" style={{ backgroundColor: mode === 'dark' ? 'rgb(46 49 55)' : '', color: mode === 'dark' ? 'white' : '', }} >
-                                                <div onClick={() => window.location.href = `/clotheinfo/${id}`} className="flex justify-center cursor-pointer" >
-                                                    <img className=" rounded-2xl w-full h-80 p-2 hover:scale-110 transition-scale-110  duration-300 ease-in-out" src={imageUrl} alt="blog" />
+                                                <div className="flex justify-center cursor-pointer" >
+                                                    <Link to={`/clotheinfo/${id}`}>
+                                                        <img className=" rounded-2xl w-full h-80 p-2 hover:scale-110 transition-scale-110  duration-300 ease-in-out" src={imageUrl} alt="blog" />
+                                                    </Link>
                                                 </div>
                                                 <div className="p-5 border-t-2">
                                                     <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1" style={{ color: mode === 'dark' ? 'white' : '', }}>ROZE</h2>
-                                                    <h1 onClick={() => window.location.href = `/clotheinfo/${id}`} className="title-font text-lg font-medium text-gray-900 mb-3 hover:cursor-pointer" style={{ color: mode === 'dark' ? 'white' : '', }}>{title}</h1>
+                                                    <Link to={`/clotheinfo/${id}`}>
+                                                        <h1 onClick={() => window.location.href = `/clotheinfo/${id}`} className="title-font text-lg font-medium text-gray-900 mb-3 hover:cursor-pointer" style={{ color: mode === 'dark' ? 'white' : '', }}>{title}</h1>
+                                                    </Link>
                                                     {/* <p className="leading-relaxed mb-3">{item.description.}</p> */}
                                                     <p className="leading-relaxed mb-3" style={{ color: mode === 'dark' ? 'white' : '' }}>${price}</p>
                                                     <div className=" flex justify-center">
