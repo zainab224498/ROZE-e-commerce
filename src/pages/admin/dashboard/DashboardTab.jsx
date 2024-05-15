@@ -25,25 +25,8 @@ function DashboardTab() {
     }
 
 
-    const goToAdd = () => {
-        window.location.href = '/addAccessory'
-    }
 
-    const goToAddClothes = () => {
-        window.location.href = '/addclothe'
-    }
 
-    const goToAddShoeses = () => {
-        window.location.href = '/addshoes'
-    }
-
-    const goToAddBags = () => {
-        window.location.href = '/addbag'
-    }
-
-    const goToAddAccessories = () => {
-        window.location.href = '/addaccessory'
-    }
 
     return (
         <div >
